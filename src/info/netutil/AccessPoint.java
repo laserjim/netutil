@@ -16,7 +16,7 @@ public class AccessPoint
 	{
 		List<AccessPoint> accessPoints = new ArrayList<AccessPoint>();
 		
-		if(true) throw new UnsupportedOperationException("unimplemented; todo: implement me!");
+		new UnsupportedOperationException("unimplemented; todo: implement me!").printStackTrace();
 		
 		return accessPoints;
 	}
