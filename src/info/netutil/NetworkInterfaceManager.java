@@ -3,6 +3,7 @@ package info.netutil;
 import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.NetworkInterface;
+import java.net.SocketException;
 
 public class NetworkInterfaceManager
 {
@@ -30,6 +31,11 @@ public class NetworkInterfaceManager
 	{
 		// TODO: Read and report errors
 		Runtime.getRuntime().exec(new String[]{"ifconfig", nic.getName(), "up"}).waitFor();
+	}
+	
+	public static NetworkInterface getDefaultNetworkInterface() throws SocketException
+	{
+		return NetworkInterface.getByName("wlan0");
 	}
 }
 
